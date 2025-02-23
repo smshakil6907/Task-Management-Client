@@ -1,14 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Outlet } from "react-router-dom";
-import Footer from "../Component/Footer";
-import Navbar from "../Component/Navbar";
+import Login from "../Pages/Login";
+import { AuthContext } from "../Provider/AuthProvider";
 
 export default function Main() {
-  return (
-    <div>
-      <Navbar></Navbar>
-      <Outlet></Outlet>
-      <Footer></Footer>
-    </div>
-  );
+  const { user } = useContext(AuthContext);
+
+  return <div>{user ? <Outlet /> : <Login />}</div>;
 }

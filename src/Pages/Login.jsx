@@ -21,7 +21,7 @@ export default function Login() {
     userLogin(email, password).then((result) => {
       const user = result.user;
       // console.log(user);
-      navigate("/");
+      navigate("/allTask");
       Swal.fire({
         title: "User Login Successful.",
         showClass: {
@@ -46,7 +46,7 @@ export default function Login() {
         };
         axiosPublic.post("users", userInfo).then((res) => {
           // console.log(res.data);
-          navigate("/");
+          navigate("/allTask");
         });
         toast.success("Logged in with Google!");
       })

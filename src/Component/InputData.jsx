@@ -34,13 +34,16 @@ export default function InputData({ inputdev, setInputdev }) {
     };
 
     try {
-      const response = await fetch("http://localhost:5000/task", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(newTask),
-      });
+      const response = await fetch(
+        "https://task-management-server-ten-mu.vercel.app/task",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(newTask),
+        }
+      );
 
       const result = await response.json();
       if (result.insertedId) {

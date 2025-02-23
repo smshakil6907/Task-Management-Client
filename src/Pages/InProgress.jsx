@@ -10,7 +10,9 @@ export default function InProgress() {
   // Fetch only "In Progress" category tasks
   const fetchInProgressTasks = async () => {
     try {
-      const response = await fetch("http://localhost:5000/tasks/inprogress");
+      const response = await fetch(
+        "https://task-management-server-ten-mu.vercel.app/tasks/inprogress"
+      );
       const data = await response.json();
       setTasks(data);
     } catch (error) {

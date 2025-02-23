@@ -16,7 +16,9 @@ export default function Card({ setInputdev }) {
 
   const fetchTasks = async () => {
     try {
-      const response = await fetch("http://localhost:5000/tasks");
+      const response = await fetch(
+        "https://task-management-server-ten-mu.vercel.app/tasks"
+      );
       const data = await response.json();
       setTasks(data);
     } catch (error) {
@@ -32,9 +34,12 @@ export default function Card({ setInputdev }) {
     if (!confirmDelete) return;
 
     try {
-      const response = await fetch(`http://localhost:5000/task/${id}`, {
-        method: "DELETE",
-      });
+      const response = await fetch(
+        `https://task-management-server-ten-mu.vercel.app/task/${id}`,
+        {
+          method: "DELETE",
+        }
+      );
       const result = await response.json();
       if (response.ok) {
         alert(result.message);
@@ -57,7 +62,7 @@ export default function Card({ setInputdev }) {
   const handleUpdate = async () => {
     try {
       const response = await fetch(
-        `http://localhost:5000/task/${editTask._id}`,
+        `https://task-management-server-ten-mu.vercel.app/task/${editTask._id}`,
         {
           method: "PUT",
           headers: { "Content-Type": "application/json" },

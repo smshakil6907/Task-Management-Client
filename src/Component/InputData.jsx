@@ -62,9 +62,9 @@ export default function InputData({ inputdev, setInputdev }) {
 
       {/* Modal */}
       <div
-        className={`${inputdev} fixed top-0 left-0 flex items-center justify-center h-screen w-full`}
+        className={`${inputdev} fixed top-0 left-0 flex items-center justify-center h-screen w-full p-4`}
       >
-        <div className="w-2/6 bg-gray-900 p-4 rounded shadow-lg">
+        <div className="w-full sm:w-3/4 md:w-2/4 lg:w-2/6 bg-gray-900 p-6 rounded-lg shadow-lg">
           <div className="flex justify-between items-center mb-4">
             <h2 className="text-white text-lg font-semibold">Add Task</h2>
             <button
@@ -81,7 +81,7 @@ export default function InputData({ inputdev, setInputdev }) {
             name="title"
             value={task.title}
             onChange={handleChange}
-            className="px-3 py-2 rounded w-full bg-gray-700 text-white"
+            className="px-3 py-2 rounded w-full bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
             type="text"
             maxLength="50"
             required
@@ -93,7 +93,7 @@ export default function InputData({ inputdev, setInputdev }) {
             value={task.description}
             onChange={handleChange}
             placeholder="Description (Optional, max 200 chars)"
-            className="px-3 py-2 rounded w-full my-3 bg-gray-700 text-white"
+            className="px-3 py-2 rounded w-full my-3 bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
             maxLength="200"
           />
 
@@ -102,7 +102,7 @@ export default function InputData({ inputdev, setInputdev }) {
             name="category"
             value={task.category}
             onChange={handleChange}
-            className="px-3 py-2 rounded w-full bg-gray-700 text-white"
+            className="px-3 py-2 rounded w-full bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
           >
             <option value="To-Do">To-Do</option>
             <option value="In Progress">In Progress</option>
@@ -112,7 +112,7 @@ export default function InputData({ inputdev, setInputdev }) {
           {/* Submit Button */}
           <button
             onClick={handleSubmit}
-            className="px-3 py-2 bg-blue-400 rounded text-black text-xl w-full mt-4"
+            className="px-3 py-2 bg-blue-500 rounded text-black text-xl w-full mt-4 hover:bg-blue-600 transition duration-200"
           >
             Submit
           </button>

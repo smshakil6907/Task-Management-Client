@@ -30,10 +30,10 @@ export default function Sidebar() {
     },
   ];
   return (
-    <div className="">
+    <div className="flex flex-col justify-between h-full">
       <div>
         <h1 className="text-xl font-semibold">Task Management</h1>
-        <h2 className="text-gray-400 mb-1">{user.email}</h2>
+        <h2 className="text-gray-400 mb-1 mt-4">{user.email}</h2>
         <hr />
       </div>
       <div>

@@ -1,12 +1,12 @@
 import { createBrowserRouter } from "react-router-dom";
 import Main from "../MainLayout/Main";
 import AllTask from "../Pages/AllTask";
-import CompletedTask from "../Pages/CompletedTask";
+import IncompletedTask from "../Pages/Done";
 import Home from "../Pages/Home";
-import ImportantTask from "../Pages/ImportantTask";
-import IncompletedTask from "../Pages/IncompletedTask";
+import CompletedTask from "../Pages/InProgress";
 import Login from "../Pages/Login";
 import Register from "../Pages/Register";
+import ImportantTask from "../Pages/Todo";
 
 export const router = createBrowserRouter([
   {
